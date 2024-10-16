@@ -1,0 +1,15 @@
+<div>
+    <input [(ngModel)] = "newAppointmentTitle" placeholder="Appointment title">
+    <input [(ngModel)] = "newAppointmentDate" type="date" placeholder="Appointment date">
+    <button (click)="addAppointment()">Add</button>
+    
+</div>
+
+
+<ul>
+    <!-- this is iterating throu a list of appoitments // one way binding -->
+    <li *ngFor="let appointment of appointments; index as i">
+        {{appointment.title}} {{appointment.date | date: 'dd.MM.yyyy'}}
+        <button (click)="deleteAppointment(i)">Delete</button>
+    </li>
+</ul>

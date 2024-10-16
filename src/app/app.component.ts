@@ -5,6 +5,8 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
+
+//export is for making the class aviable in othe files
 export class AppComponent {
   title = 'apointment-app';
 }
